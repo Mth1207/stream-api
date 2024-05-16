@@ -15,7 +15,8 @@ public class CarrinhoDeCompras {
             throw new RuntimeException("A lista está vazia!");
         }
         return itemList.stream()
-                .mapToDouble(item -> item.getPreco() * item.getQuantidade()).sum();
+                .mapToDouble(item -> item.getPreco() * item.getQuantidade())
+                .sum();
     }
 
     public void adicionarItens(String nome, double preco, int quantidade) {
